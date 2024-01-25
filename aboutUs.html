@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      .navbar {
+        position: sticky;
+        top: 0px;
+      }
+      
+      .text-overlay {
+  position: absolute;
+  top: 1950px;
+  left: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 100;
+  color: white;
+  /* backdrop-filter: blur(8px) brightness(80%); */
+}
+  .cardDiv{
+    position: relative;
+    top: auto;
+    z-index: -1;
+  }
+  .cardImg{
+    position: relative;
+    top: auto;
+    z-index: -1;
+  }
+    </style>
+  </head>
+
+  <body style="background-color: #e2da99">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Green Matrix</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active text-white" href="aboutUs.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="newsAndUpdates.html"
+                >News & Media</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Recommendation
+              </a>
+              <ul
+                class="dropdown-menu bg-dark bg-gradient"
+                style="--bs-bg-opacity: 0.5"
+              >
+                <li>
+                  <a class="dropdown-item text-white" href="#">Crop</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#">Crop Disease</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#">Fertilizer</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="chatroom.html">Forum</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"><br>
+          <h1 class="fw-bold text-center">About Us</h1>
+          <p>The primary source of income for about two-thirds of the population, directly or indirectly, the sector has undergone significant transformations since the Green Revolution in the 1960s, which brought about high-yielding varieties of crops, modern irrigation methods, and fertilizers. However, the country still faces several challenges in agricultural development, including small and fragmented landholdings, low productivity, inadequate irrigation facilities, and the effects of climate change.</p>
+          <p>The Indian Government has implemented various policies and initiatives to address these challenges and promote sustainable agricultural development. One such initiative is the Pradhan Mantri Fasal Bima Yojana (PMFBY), a crop insurance scheme that provides financial support to farmers in case of crop failure due to natural calamities, pests, or disease.</p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Youtube and Image -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/ZFsz-cFXzM8?si=igoUDqZmVnQPnF-2"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-sm-6">
+          <p>
+            The future of agriculture in India will likely see increased
+            technology adoption, a focus on climate change resilience and
+            sustainability, government initiatives to support farmers, farm
+            mechanization, improved market access, crop diversification, crop
+            insurance, and efforts to enhance the livelihoods of farmers.
+          </p>
+          <p>
+            Agriculture encompasses a wide range of activities, from planting
+            and harvesting crops to animal husbandry, and it plays a critical
+            role in the global economy. The future of agriculture is evolving to
+            address challenges like climate change, sustainability, and
+            technology adoption while striving to meet the growing demand for
+            food and resources.
+          </p>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="row">
+        <div class="col-sm-6">
+          <p>
+            Organic farming has been gaining popularity in response to growing
+            consumer demand for healthier and more environmentally friendly food
+            options. As a result, it is an important part of the global
+            agricultural landscape, contributing to more sustainable and
+            eco-friendly food production.
+          </p>
+        </div>
+        <div class="col-sm-6 text-center">
+          <img
+            id="aboutImg"
+            src="./images/AboutUs1.webp"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="row">
+        <div class="col-sm-6">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/POaRo9tZ1lc?si=jEmnr8HIdy_FI0Rt"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-sm-6">
+          <p>
+            Poultry farming, raising of birds domestically or commercially,
+            primarily for meat and eggs but also for feathers. Chickens,
+            turkeys, ducks, and geese are of primary importance, while guinea
+            fowl and squabs (young pigeons) are chiefly of local interest. This
+            article treats the principles and practices of poultry farming. For
+            a discussion of the food value and processing of poultry products,
+            see egg and poultry processing.
+          </p>
+          <p>
+            Outbreaks of bird flu, or avian influenza, which was first detected
+            in humans in 1997, have led to the culling of millions of poultry
+            animals since the late 20th century. Waterfowl such as wild ducks
+            are thought to be primary hosts for all bird flu subtypes.
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="row">
+        <div class="col-sm-6">
+          <p>
+            Plants are the eukaryotes that form the kingdom Plantae; they are
+            predominantly photosynthetic. This means that they obtain their
+            energy from sunlight, using chloroplasts derived from endosymbiosis
+            with cyanobacteria to produce sugars from carbon dioxide and water,
+            using the green pigment chlorophyll. Exceptions are parasitic plants
+            that have lost the genes for chlorophyll and photosynthesis, and
+            obtain their energy from other plants or fungi.
+          </p>
+          <p>
+            Historically, as in Aristotle's biology, the plant kingdom
+            encompassed all living things that were not animals, and included
+            algae and fungi. Definitions have narrowed since then; current
+            definitions exclude the fungi and some of the algae.
+          </p>
+        </div>
+        <div class="col-sm-6 text-center">
+          <img
+            src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2020/07/Photosynthesis_2880_Lede.jpg"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+<!-- About us section -->
+<div class="container-fluid" style="padding: 0; ">
+  <div class="row align-items-center">
+    <div class="col-sm-12 cardDiv">
+      <div class="card bg-dark text-white border-0">
+        <img src="https://about.deere.com/resource/image/5714/landscape_ratio4x1/1600/400/f2f558ef7ef36c2d8cadca0ac44b6963/4A22A64F2E51D59739FAA2556B4D4CD4/picture-innovation-16x9-gif.gif" class="card-img" alt="...">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title display-6 fw-bold" style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">We're shaping the future of agriculture for a new generation.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Services -->
+    <br /><br /><br>
+    <div class="services">
+      <div class="container">
+        <div class="row">
+          <h3 class="text-center fw-bold">Our Services</h3>
+          <!-- error -->
+          <div class="col-md-4">
+            <!-- md- medium -->
+            <div class="row">
+              <img src="https://img.sunset02.com/sites/default/files/image/2018/02/main/garden-soil-shovel-getty-0318.jpg" class="card-img-top cardImg" style="height: 17rem;" alt="...">
+              <div class="cardDiv">
+                <div class="card mx-auto " style="top: -50px; width: 24rem;">
+                  <div class="card-body">
+                    <h5 class="text-center">Soil</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!-- md- medium -->
+            <div class="row">
+              <img src="https://www.agrivi.com/wp-content/uploads/2021/05/Crop-Diseases-The-Nightmare-of-Every-Farmer-1200x565.jpeg" class="card-img-top cardImg" style="height: 17rem;" alt="...">
+              <div class="cardDiv">
+                <div class="card mx-auto" style="top: -50px; width: 24rem;">
+                  <div class="card-body">
+                    <h5 class="text-center">Crop Disease</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- md- medium -->
+            <div class="row">
+              <img src="https://www.fertilizer-machine.net/wp-content/uploads/2018/06/types-of-fertilizer.jpg" class="card-img-top cardImg" style="height: 17rem;" alt="...">
+              <div class="cardDiv">
+                <div class="card mx-auto" style="top: -50px; width: 24rem;">
+                  <div class="card-body">
+                    <h5 class="text-center">Fertilizers</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<!-- Footer -->
+<footer>
+  <div class="container-fluid" id="foot">
+  <div class="row p-5">
+    <div class="col-sm-4">
+      <h2>GREEN MATRIX</h2>
+      <p>Assistance to wannabe farmers.</p>
+      <p>We help people to connect and develop their interest in farming and it's practice.</p>
+      <!-- <p><small style="color: rgba(223, 202, 202, 0.849);">&copy 2021. Green Matrix. All rights reserved.</small></p> -->
+    </div>
+    <div class="col-sm-4">
+      <h2>CONTACTS</h2>
+      <p> <ion-icon name="location-outline"></ion-icon> Rajajipuram, Lucknow.</p>
+      <p> <ion-icon name="call-outline"></ion-icon> 9198084101</p>
+      <p> <ion-icon name="mail-outline"></ion-icon> yashasvika.saxena@gmail.com</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>GET IN TOUCH</h2>
+      <div class="container-fluid">
+        <div class="row "></div>
+        <div class="row"></div>
+        <div class="row"></div>
+      </div>
+    </div>
+    <div class="FooterClass">
+      <ul class="social_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+      </ul>
+  
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="newsAndUpdates.html">News & Media</a></li>
+        <li><a href="#">Recommendation</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="chatroom.html">Forum</a></li>
+  
+      </ul>
+      <p><Small>&copy 2024. Green Matrix. All rights reserved.</Small></p>
+    </div>
+    
+  </footer>
+  </body>
+</html>
