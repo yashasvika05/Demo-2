@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Matrix</title>
+
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<style>
+  card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0px;
+    border-radius: var(--bs-card-inner-border-radius);
+}
+#m-5{
+  margin: 3rem !important;
+  /* margin: 0 !important; */
+}
+/* .display-6 {
+  font-size: 24px;
+} */
+@media (min-width: 654px) and (max-width: 1000px) {
+  #m-5{
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.display-6 {
+  font-size: 24px;
+}
+#p{
+  margin-top: -34px;
+}
+}
+@media (min-width: 448px) and (max-width: 654px){
+  #m-5{
+  margin: 0 !important;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.display-6 {
+  font-size: 24px;
+}
+#p{
+  margin-top: -34px;
+}
+}
+@media (max-width: 448px) {
+ m-5 {
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #p {
+  font-size: 8px;
+ }
+ .display-6 {
+  font-size: 18px;
+ }
+}
+
+/* carousel transparent overlay */
+#overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: rgba(7, 7, 7, 0.623);
+padding: 20px;
+border-radius: 23px;
+color: #fff;
+text-align: center;
+font-size: 24px;
+}
+</style>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top transparent-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">Green Matrix</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white " aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-white " href="aboutUs.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="newsAndUpdates.html">News & Media</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Recommendation
+                </a>
+                <ul class="dropdown-menu bg-dark bg-gradient" style="--bs-bg-opacity: .5;">
+                  <li><a class="dropdown-item text-white" href="#">Crop</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Crop Disease</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Fertilizer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="chatroom.html">Forum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Caraousel -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner carousel-img-size">
+          <div class="carousel-item active">
+            <div class="carousal-img d-block w-100" style="background-image: url('./images/Agro1.1.jpg');"></div>
+            <div class="card-img-overlay img-div fs-2 fw-bold" id="overlay">
+              Cultivating Sustainable Agriculture for a Greener Future
+           </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousal-img d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="card-img-overlay img-div fs-2 fw-bold" id="overlay">
+              Empowering Farmers, Enriching Communities
+           </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousal-img d-block w-100" style="background-image: url('https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2018/12/vegetables.jpg');"></div>
+            <div class="card-img-overlay img-div fs-2 fw-bold" id="overlay">
+              From Seed to Table: Nurturing Growth, Ensuring Quality
+           </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousal-img d-block w-100" style="background-image: url('./images/Agro1.4.jpg');"></div>
+            <div class="card-img-overlay img-div fs-2 fw-bold" id="overlay">
+              Harvesting Tomorrow's Prosperity
+           </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon mb-5" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon mb-5" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>        
+      </div>
+    </header>
+
+    <!-- Cards -->
+    <div class="container-fluid" style="margin-top: -110px;">
+      <div class="row">
+        <div class="col-sm-2">
+          <h1 class="fw-bold p-3 mt-5"><small>Cultivating Excellence in Agriculture</small></h1>
+        </div>
+        <div class="col-sm-10">
+          <h2 class="fw-bold">Harvesting Tomorrow's Agriculture Today</h2>
+          <p>Welcome to our platform, where innovation meets cultivation. Discover sustainable practices, cutting-edge technologies, and empower yourself with the knowledge to lead the future of agriculture. Join us in sowing the seeds of a resilient and prosperous tomorrow.</p>
+          <div class="row">
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.1.png" class="img-fluid mx-auto" alt="logo"  >
+                <div class="card-body">
+                  <p class="card-text"><small>Explore eco-friendly methods that ensure bountiful harvests while preserving our precious resources.</small></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.2.png" class="img-fluid mx-auto" alt="logo" >
+                <div class="card-body">
+                  <p class="card-text"><Small>Embrace the latest advancements in ag-tech to optimize yields and revolutionize the way you farm.</small></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.3.png" class="img-fluid mx-auto" alt="logo" style="object-fit: contain;">
+                <div class="card-body">
+                  <p class="card-text"><small>Join a community of ambitious young minds, passionate about shaping the future of farming.</small></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.4.png" class="img-fluid mx-auto" alt="logo"  style="object-fit: contain;">
+                <div class="card-body">
+                  <p class="card-text"><small>Gain insights into international agricultural trends and practices, fostering a broader perspective on the industry.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.5.png" class="img-fluid mx-auto" alt="logo" >
+                <div class="card-body">
+                  <p class="card-text"><Small>Connect with the farm-to-table movement, promoting healthy, locally sourced produce and sustainable living.</Small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="card" id="crd">
+                <img src="./images/Agro1.1.6.png" class="img-fluid mx-auto" alt="logo" >
+                <div class="card-body">
+                  <p class="card-text"><small>Dive into our innovation hub, where ideas flourish, and discover groundbreaking solutions propelling agriculture into the future.</small></p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+    </div>
+    <br>
+
+
+
+<!-- blur card -->
+<div class="card bg-dark text-white blur-main">
+  <div class="blur-card"></div>
+  <div class="card-img-overlay" id="m-5">
+    <h5 class="card-title fw-bold blur-text display-6">Diversification of rice-based cropping system with high-value crops for increased productivity and profitability</h5>
+    <br>
+    <p class="card-text fw-bold" id="p">To meet the ever-increasing population's demand for cereal, pulses, and oilseeds, it was found that including oilseeds and pulses in a rice-based cropping sequence was more beneficial than cereal alone. Crop diversification can thus help to improve livelihoods, environmental stability, and financial prosperity.</p>
+  </div>
+</div>
+
+<!-- element -->
+<div class="container-fluid element" style="background-color: bisque;">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="container-fluid">
+        <div class="row my-3">
+          <div class="col-sm-6 d-block align-items-center justify-content-center" style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        ">
+            <div class="element-box1 elbox m-4 mt-5">
+              <div class="inside">
+                <img class="p-4" src="https://validthemes.net/themeforest/wp/agrul/wp-content/uploads/2022/10/1.png" alt="">
+                <h4 class="fs-3 text-decoration-underline text-light fw-bold" style="padding-left: 1rem;">Natural Farming</h4>
+                <p class="text-light fs-5 p-2">Resolve parties but trying she shewing of moment.</p>
+              </div>
+            </div>
+            <div class="element-box2 elbox m-4">
+              <div class="inside">
+                <img class="p-4" src="https://validthemes.net/themeforest/wp/agrul/wp-content/uploads/2022/10/2.png" alt="">
+                <h4 class="fs-3 text-decoration-underline text-light fw-bold" style="padding-left: 1rem;">Quality Products</h4>
+                <p class="text-light fs-5 p-2">Always parties but trying she shewing of moment.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 element-div" style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        ">
+            <div class="element-box3 elbox">
+              <div class="inside">
+                <img class="p-4" src="https://validthemes.net/themeforest/wp/agrul/wp-content/uploads/2022/10/1-2.png" alt="">
+                <h4 class=" fs-3 text-decoration-underline text-light fw-bold" style="padding-left: 1rem;">Happy farms</h4>
+                <p class="text-light fs-5 p-2">Resolve parties but trying she shewing of moment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 my-auto">
+      <!-- <div class="element-text m-5 p-3 pt-5"> -->
+        <h1 class="fw-bold display-6">	
+          The key elements to a successful business and a sustainable environment</h1><br>
+        <p>Companies can improve their environmental sustainability by, for example, reducing their carbon footprint or wasteful practices. A sustainable business should be able to generate revenue and profits while minimising negative impacts on the environment and society.</p>
+        <p>Environmental, social, and governance (ESG) metrics are often used to determine how ethical and sustainable an organization is. According to McKinsey, companies with high ESG ratings consistently outperform the market in both the medium and long term. While sustainability strategies might be an investment in the short term, they can lead to long-term benefits.</p>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<!-- Card-2 -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 ">
+      <h1>We're providing high
+        quality products</h1>
+      <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting</p>
+    
+
+    </div>
+    <div class="col-sm-6 text-center">
+      <img src="./images/Agro11.jpg"  class="img-fluid" alt="" srcset="" style="border-radius: 20px;">
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+
+<!-- Yellow plate -->
+<div class="container-fluid plate">
+  <div class="row">
+    <div class="col-sm-7 mt-5" style="padding-left: 35px;">
+      <p style="text-transform: uppercase;"><small>I t s &nbsp; t h e &nbsp; m a g i c .</small></p>
+      <h1 class="plate-heading">The Art and Science of Agriculture</h1>
+      <p class="plate-para">
+      Agriculture is the art and science of cultivating the soil, growing crops, and raising livestock. It includes the preparation of plant and animal products for people to use and their distribution to markets.</p>
+      <button class="plate-btn">
+        <p class="plate-btn-text">Request a demo</p>
+      </button>    
+    </div>
+    <div class="col-sm-5">
+      <img class="plate-img img-fluid" src="https://organicsphere.in/wp-content/uploads/2020/08/0d315f_51d6eaa3390f406ba819c5904be12df0_mv2_d_2412_1600_s_2-1200x796.png" alt="">
+    </div>
+  </div>
+</div>
+<br><br>
+
+<!-- Image and accordioon (round) -->
+<div class="container-fluid" style="padding:0;">
+  <div class="card mb-3" style="border: none;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid rounded-start round" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-text" style="text-shadow: 2px 2px 4px #e2d9d6;"><small class="text-muted">GET TO KNOW US</small></p>
+          <h1 class="card-title fw-bold" >Agriculture matters to
+            the future of development</h1>
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item" style="border: none; box-shadow: 2px 3px 5px lightblue;">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <strong>What do you add to the soil before you plant a crop?</strong> 
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Adding organic matter in the form of compost and aged manure, or using mulch or growing cover crops (green manures), is the best way to prepare soil for planting.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item"  style="border: none; box-shadow: 2px 3px 5px lightblue;">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <strong>Do you use Herbicides?</strong>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Herbicides are used to control undesired plants on farms, in commercial forests, and on lawns and managed landscapes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item"  style="border: none; box-shadow: 2px 3px 5px lightblue;">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <strong>Where does the water come from that you use on your crop?</strong> 
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Irrigation water can come from groundwater, through springs or wells, surface water, through rivers, lakes, or reservoirs, or even other sources, such as treated wastewater or desalinated water.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+    
+<!-- new -->
+<div class="container px-4"style="background-image: url('https://validthemes.net/themeforest/wp/agrul/wp-content/uploads/2023/11/26.png'); height: 400px;">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="border bg-light mt-5" style="box-shadow: 1px 1px 8px #a0c0b4; ">
+       <h2 class=" p-1 text-light fw-bold" style="background-color: #1f4e3d; border-radius: 4px 35px 0px 0px;">Farmers need Equitable access to Land now.</h2>
+      <p class="p-3 text-secondary"><b><small>I always say I would not still be farming without the National Young Farmers Coalition. When I am wondering about this decision and doubting my capacity to continue, I meet with other young farmers across the country who are doing this same work. It reminds me how much I want to be a part of creating equitable food systems!</small> </b> </p>
+    </div>
+    </div>
+    <div class="col">
+      <div class="border bg-light mt-5" style="box-shadow: 1px 1px 8px #a0c0b4;">
+        <h2 class=" p-1 text-light fw-bold" style="background-color: #1f4e3d; border-radius: 4px 35px 0px 0px;">Quality designed gardening for home.</h2>
+      <p class="p-3 text-secondary fw-bold"><small>Announcing if the resolution sentiments Possession ye no mr unaffected remarkably.</small></p>
+      <ul class="fw-bold text-secondary"> <small>
+        <li>Fruits</li>
+        <li>Vegetables</li>
+      <li>Ankita</li></small>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 cards -->
+<div class="container">
+<div class=" row card-deck mb-5">
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" style="height: 250px" src="https://m.economictimes.com/thumb/msid-95588049,width-1200,height-900,resizemode-4,imgsize-811303/monsoon-showers-bring-50-more-water-for-rabi-crops.jpg" alt="Card image cap">
+      <div class="card-body" style="height: 200px">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" style="height: 250px" src="https://cf.organicbazar.net/wp-content/uploads/2023/06/garden-93-2.jpg" alt="Card image cap">
+      <div class="card-body" style="height: 200px">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" style="height: 250px" src="https://organicabiotech.com/wp-content/uploads/2020/08/515.jpg" alt="Card image cap">
+      <div class="card-body" style="height: 200px">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container">
+
+  <div class=" row card-deck mb-5">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" style="height: 250px" src="https://rodaleinstitute.org/wp-content/uploads/FST_MitchM.jpg" alt="Card image cap">
+        <div class="card-body" style="height: 200px">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" style="height: 250px" src="https://blog.agribegri.com/public/blog_images/kharif-season-cultivating-tomato-600x400.jpg" alt="Card image cap">
+        <div class="card-body" style="height: 200px">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" style="height: 250px" src="https://blog.agribazaar.com/wp-content/uploads/2021/04/Farmer_harvesting_wheat_PTI_1200.jpg" alt="Card image cap">
+        <div class="card-body" style="height: 200px">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+<div class="container-fluid" id="foot">
+<div class="row p-5">
+  <div class="col-sm-4">
+    <h2>GREEN MATRIX</h2>
+    <p>Assistance to wannabe farmers.</p>
+    <p>We help people to connect and develop their interest in farming and it's practice.</p>
+    <!-- <p><small style="color: rgba(223, 202, 202, 0.849);">&copy 2021. Green Matrix. All rights reserved.</small></p> -->
+  </div>
+  <div class="col-sm-4">
+    <h2>CONTACTS</h2>
+    <p> <ion-icon name="location-outline"></ion-icon> Rajajipuram, Lucknow.</p>
+    <p> <ion-icon name="call-outline"></ion-icon> 9198084101</p>
+    <p> <ion-icon name="mail-outline"></ion-icon> yashasvika.saxena@gmail.com</p>
+  </div>
+  <div class="col-sm-4">
+    <h2>GET IN TOUCH</h2>
+    <div class="container-fluid">
+      <div class="row "></div>
+      <div class="row"></div>
+      <div class="row"></div>
+    </div>
+  </div>
+  <div class="FooterClass">
+    <ul class="social_icon">
+      <li>
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      </li>
+    </ul>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutUs.html">About</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="newsAndUpdates.html">News & Media</a></li>
+      <li><a href="#">Recommendation</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="chatroom.html">Forum</a></li>
+
+    </ul>
+    <p><Small>&copy 2024. Green Matrix. All rights reserved.</Small></p>
+  </div>
+  
+</footer>
+  </body>
+</html>

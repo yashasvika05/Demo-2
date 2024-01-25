@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News&Media</title>
+
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="Bootstrap/js/bootstrap.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <style>
+      .navbar {
+        position: sticky;
+        top: 0px;
+      }
+      .sidebar {
+        position: relative;
+        left: 5px;
+        top: auto;
+        z-index: -1;
+      }
+      
+      .sidebar-element:hover {
+        color: red;
+        cursor: pointer;
+      }
+      .sidebar-element {
+        color: rgb(71, 71, 153);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Green Matrix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.html" >Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="aboutUs.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                Shop
+              </a>
+              <ul class="dropdown-menu bg-dark bg-gradient" style="--bs-bg-opacity: 0.5" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item text-white" href="#">Fertilizer</a></li>
+                <li><a class="dropdown-item text-white" href="#">Tools</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item text-white" href="#">Seeds</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="newsAndUpdates.html">News & Media</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                Recommendation</a>
+              <ul class="dropdown-menu bg-dark bg-gradient" style="--bs-bg-opacity: 0.5" >
+                <li><a class="dropdown-item text-white" href="#">Crop</a></li>
+                <li><a class="dropdown-item text-white" href="#">Crop Disease</a></li>
+                <li><a class="dropdown-item text-white" href="#">Fertilizer</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="chatroom.html">Forum</a></li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="Search"
+          />
+          <button id="search-button" class="search-button btn btn-info text-light fw-bold">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="sidebar">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item py-3 sidebar-element" id="livestock" onclick="onNavItemClick('livestock')"><b>Livestock</b></li>
+              <li class="list-group-item py-3 sidebar-element" id="freshfarm" onclick="onNavItemClick('freshfarm')">Fresh farm</li>
+              <li class="list-group-item py-3 sidebar-element" id="vegetables" onclick="onNavItemClick('vegetables')">Vegetables</li>
+              <li class="list-group-item py-3 sidebar-element" id="fruits" onclick="onNavItemClick('fruits')">Fruits</li>
+              <li class="list-group-item py-3 sidebar-element" id="cultivation" onclick="onNavItemClick('cultivation')">Cultivation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <h2 class="fw-bold">New Releases</h2>
+          <p>
+            Read news and announcements from Green Matrix. If you are a reporter
+            and want more information on today's farming you are at the right
+            place.
+          </p>
+          <hr />
+          
+          <main>
+            <div class="cards-container mb-3" id="cards-container">
+
+            </div>
+          </main>
+          <template id="template-news-card">
+            <div class="row">
+              <div class="col-sm-4 ">
+                <img
+                  src="https://www.oneindia.com/img/2017/03/drought-farm-07-1488878374.jpg"
+                  alt=""
+                  class="img-fluid w-100 mb-3"
+                  style="height: 15rem"
+                  id="news-img"
+                />
+              </div>
+              <div class="col-sm-8 my-auto">
+                <h3 id="news-title">
+                  Over 20% of India reeling under drought, says US weather agency
+                </h3>
+                <h6 class="news-source" id="news-source" style="margin-top: .2rem;">End Gadget 17/01/2024</h6>
+                <p id="news-desc" >
+                  Even as 2023 heads to be ranked as the warmest year on record
+                  globally, at least a fifth of India is undergoing drought, US
+                  national weather agency National Oceanic and Atmospheric
+                  Administration (NOAA) has said.
+                </p>
+              </div>
+            </div>
+          </template>
+
+
+<!--           
+          <div class="row mt-5">
+            <div class="col-sm-4">
+              <img
+                src="https://img1.exportersindia.com/product_images/bc-full/2021/9/9293002/basmati-rice-1631969195-5999525.jpeg"
+                alt=""
+                class="img-fluid w-100"
+                style="height: 15rem"
+              />
+            </div>
+            <div class="col-sm-8 my-auto">
+              <h3>
+                Consumption of unbranded basmati leaving scope for adulteration
+              </h3>
+              <p>
+                Industry, FSSAI on country-wide roadshows to promote quality
+                standards of the fragrant rice to counter adulteration
+              </p>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-sm-4">
+              <img
+                src="https://www.venkateshwaragroup.in/vgiblog/wp-content/uploads/2023/04/Scope-for-Agriculture.jpg"
+                alt=""
+                class="img-fluid w-100"
+                style="height: 15rem"
+              />
+            </div>
+            <div class="col-sm-8 my-auto">
+              <h3>What is the future scope of BSc in agriculture?</h3>
+              <p>
+                The future scope of BSc in agriculture is quite promising, as
+                the agriculture industry continues to be a vital part of the
+                global economy. Graduates with a BSc in agriculture can pursue
+                careers in various fields such as agribusiness, agricultural
+                research, farm management, food production, environmental
+                conservation, and agricultural education. With the increasing
+                focus on sustainable agriculture and food security, there are
+                also opportunities in agri-tech, precision farming, and
+                agricultural consulting.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-sm-4">
+              <img
+                src="https://www.civilsdaily.com/wp-content/uploads/2023/01/agri.jpg"
+                alt=""
+                class="img-fluid w-100"
+                style="height: 15rem"
+              />
+            </div>
+            <div class="col-sm-8 my-auto">
+              <h3>What are the real challenges in the agriculture of India?</h3>
+              <p>
+                Some of the key challenges facing Indian agriculture today
+                include: Small and fragmented landholdings: The average farm
+                size in India is small, with around 85 percent of farms being
+                less than 2 hectares in size, which can make it difficult for
+                farmers to be profitable.
+              </p>
+            </div>
+          </div>
+ -->
+
+        </div>
+      </div>
+    </div>
+
+    
+<!-- Footer -->
+<footer>
+  <div class="container-fluid mt-5" id="foot">
+  <div class="row p-5">
+    <div class="col-sm-4">
+      <h2>GREEN MATRIX</h2>
+      <p>Assistance to wannabe farmers.</p>
+      <p>We help people to connect and develop their interest in farming and it's practice.</p>
+      <!-- <p><small style="color: rgba(223, 202, 202, 0.849);">&copy 2021. Green Matrix. All rights reserved.</small></p> -->
+    </div>
+    <div class="col-sm-4">
+      <h2>CONTACTS</h2>
+      <p> <ion-icon name="location-outline"></ion-icon> Rajajipuram, Lucknow.</p>
+      <p> <ion-icon name="call-outline"></ion-icon> 9198084101</p>
+      <p> <ion-icon name="mail-outline"></ion-icon> yashasvika.saxena@gmail.com</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>GET IN TOUCH</h2>
+      <div class="container-fluid">
+        <div class="row "></div>
+        <div class="row"></div>
+        <div class="row"></div>
+      </div>
+    </div>
+    <div class="FooterClass">
+      <ul class="social_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+      </ul>
+  
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="newsAndUpdates.html">News & Media</a></li>
+        <li><a href="#">Recommendation</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="chatroom.html">Forum</a></li>
+  
+      </ul>
+      <p><Small>&copy 2024. Green Matrix. All rights reserved.</Small></p>
+    </div>
+    
+  </footer>
+
+  <script>
+    const API_KEY = "4ee9aa41b8c04a699f8c1d2b00285772";
+    const url = "https://newsapi.org/v2/everything?q=";
+
+    window.addEventListener("load", () => fetchNews("paint"));
+
+    function reload() {
+        window.location.reload();
+    }
+    
+    async function fetchNews(query) {
+        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+        const data = await res.json();
+        bindData(data.articles);
+    }
+
+    function bindData(articles) {
+        const cardsContainer =  document.getElementById("cards-container");
+        const newsCardTemplate = document.getElementById("template-news-card")
+
+        cardsContainer.innerHTML = ""; //Emptying the inner html so for e.g. if 100 cards are loaded and then again 100 are loaded then first previous space is emptied
+
+        articles.forEach((article) => {
+            if (!article.urlToImage) return;
+            const cardClone =  newsCardTemplate.content.cloneNode(true);
+            fillDataInCard(cardClone, article);
+            cardsContainer.appendChild(cardClone);
+        });
+    }
+
+    function fillDataInCard(cardClone, article) {
+            const newsImg = cardClone.querySelector('#news-img')
+            const newsTitle = cardClone.querySelector('#news-title')
+            const newsSource = cardClone.querySelector('#news-source')
+            const newsDesc = cardClone.querySelector('#news-desc')
+
+            newsImg.src = article.urlToImage;
+            newsTitle.innerHTML = article.title;
+            newsDesc.innerHTML = article.description;
+
+            const date = new Date(article.publishedAt).toLocaleString("en-US", {
+                timeZone: "Asia/Jakarta" 
+            });
+
+            newsSource.innerHTML = `${article.source.name} . ${date}`;
+
+            cardClone.firstElementChild.addEventListener("click", () => {
+                window.open(article.url, "_blank");
+            });
+        }
+
+
+        let curSelectedNav = null;
+        function onNavItemClick(id) {
+            fetchNews(id);
+            const navItem = document.getElementById(id);
+            curSelectedNav?.classList.remove("active");
+            curSelectedNav = navItem;
+            curSelectedNav.classList.add("active");
+        }
+        
+        const searchButton = document.getElementById("search-button");
+        const searchText = document.getElementById("search-text")
+
+        searchButton.addEventListener('click', () => {
+            const query = searchText.value;
+            if(!query) return;
+            fetchNews(query);
+            curSelectedNav?.classList.remove("active");
+            curSelected = null;
+        });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Chat Window</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+        }
+
+        #chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #chat-button:hover {
+            background-color: #45a049;
+        }
+
+        #chat-container {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #eafaf6; /* Subtle green shade */
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        #chat-header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #close-chat {
+            cursor: pointer;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #chat-body {
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        #chat-input {
+            width: calc(100% - 20px);
+            margin: 10px;
+            padding: 8px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            outline: none;
+            resize: none;
+        }
+
+        #chat-input:focus {
+            border: 1px solid #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<button id="chat-button" onclick="openChat()">Open Chat</button>
+
+<div id="chat-container">
+    <div id="chat-header">
+        Pop-up Chat
+        <span id="close-chat" onclick="closeChat()">X</span>
+    </div>
+    <div id="chat-body"></div>
+    <textarea id="chat-input" placeholder="Type your message..." onkeydown="handleEnter(event)"></textarea>
+</div>
+
+<script>
+    function openChat() {
+        document.getElementById('chat-container').style.display = 'block';
+        document.getElementById('chat-container').style.transform = 'scale(1)';
+    }
+
+    function closeChat() {
+        document.getElementById('chat-container').style.transform = 'scale(0)';
+        setTimeout(() => {
+            document.getElementById('chat-container').style.display = 'none';
+        }, 300);
+    }
+
+    function handleEnter(event) {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            sendMessage();
+        }
+    }
+
+    function sendMessage() {
+        var messageInput = document.getElementById('chat-input');
+        var messageBody = document.getElementById('chat-body');
+        var message = messageInput.value.trim();
+
+        if (message !== '') {
+            var newMessage = document.createElement('div');
+            newMessage.className = 'message';
+            newMessage.textContent = message;
+            messageBody.appendChild(newMessage);
+
+            messageInput.value = '';
+            messageBody.scrollTop = messageBody.scrollHeight;
+        }
+    }
+</script>
+
+</body>
+</html>
